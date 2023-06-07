@@ -23,10 +23,10 @@ pipeline{
       }
       stage('Four'){
         parallel{
-          stage('Unit test'){
+          stages('Unit test'){
             steps echo "Running the Unit test.........."
           }
-          stage('Integration Test'){
+          stages('Integration Test'){
             agent{
               any{
                 reuseNode false
