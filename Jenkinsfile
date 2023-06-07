@@ -24,7 +24,9 @@ pipeline{
       stage('Four'){
         parallel{
           stage('Unit test'){
-            steps echo "Running the Unit test.........."
+            steps{
+              echo "Running the Unit test.........."
+            }
           }
           stage('Integration Test'){
             agent{
